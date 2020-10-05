@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=90,initial-scale=1.0">
+		<title>edit-menu-item</title>
+		<link rel="stylesheet" href="style/edit-menu-item.css">
+		<link rel="stylesheet" href="style/style.css">
+		<script>
+		function validate()
+		{
+			var foodName=document.getElementById('fname').value;
+			var price=document.getElementById("price").value;
+			var dateOL=document.getElementById("dateofl").value;
+			var category=document.getElementById("types").value;
+			if(foodName=="")
+			{
+				alert("Item name is required");
+			}
+			else if(price=="")
+			{
+				alert("Price is required");
+			}
+			else if(dateOL=="")
+			{
+				alert("Date of launch is required");
+			}
+			else if(category=="0");
+			{
+				alert("Category is required");
+			}
+			else{
+			window.href="edit-menu-item-status.html";
+			}
+		}</script>
+	</head>
+	<body>
+	<form onsubmit =" return validate()">
+	<section>
+	<nav>
+		<div class="header-text">truYum</div>
+			<img src="images\download.png" />
+			<div class="right"><a href=""><h3>Menu</h3></a></div>
+		
+	</nav>
+	
+	
+
+<div class="menu">
+<br>
+<div id="menu">
+<h3>Edit Menu Items</h3>
+</div>
+
+</div>
+<div class="container">
+<div class="cont">
+    
+    <label for="fname" >Name</label><br>
+    <input type="text" id="fname" value="SandWich"name="fname" style="width:50%;" required>
+ 
+
+
+  <div class="cont2">
+ 
+   
+    <label for="price"></label>Price (Rs.)</label>
+    <label for="active"style="margin-left: 50px;">Active</label>
+    <label for="dol"style="margin-left: 50px;">Date of Launch</label>
+    <label for="category"style="margin-left: 100px;">Category</label>
+    <br>
+    <input type="text" id="price" name="price" style="width:50px; float: left;margin-right: 10px;" required>
+    
+    <input type="radio" id="active" name="Active" style=" margin-top: 10px;  float: left;" required>
+    <p style="width: 50px;float: left;">Yes</p>
+    <input type="radio" id="active" name="Active" style=" margin-top: 10px; float: left;" required>
+    <p  style="width: 50px; float: left;">No</p>  
+
+
+    <input type="date" id="dateofl" name="Date_of_launch" placeholder="DD/MM/YY" style="width:200px;"required>
+
+    <select id="types" name="Main Course">
+        
+    <option value="0">Main Course</option>
+    <option value="starters">Starters</option>
+    <option value="desserts">Desserts</option>
+    <option value="drinks">Drinks</option>
+    </select>
+
+  
+  <input type="checkbox">Free Delivery<br>
+ <button type="button" class="btn btn-success"style="margin-top:5px; padding:10px;"><a href="edit-menu-item-status.html">Save</a></button>
+
+</div>
+</div>
+</div>
+</div>
+
+	
+		<div id="footer">
+		<footer><p>Copyright &copy; 2019</p></footer>
+		</footer></div>
+		
+		</section>
+		</form>
+	</body>
+</html>
